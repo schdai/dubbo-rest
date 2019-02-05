@@ -18,7 +18,7 @@
 	 <dubbo:protocol name="rest"   server="servlet"  port="8080" contextpath="dubbo-restservice"/>
 
 	<!-- 声明需要暴露的服务接口. 如果
-	 http://localhost:8080/dubbo-restservice/demo/doTest1	
+ http://localhost:8080/dubbo-restservice/demo/doTest1
 	 -->
 	<dubbo:service
 		interface="com.enson.webservice.service.UserService"   

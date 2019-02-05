@@ -13,20 +13,19 @@
 	<!-- 使用zookeeper注册中心暴露服务地址 -->
 	<dubbo:registry address="zookeeper://127.0.0.1:2181" />
 
-	<!-- 用webservice协议在8080端口暴露服务 ， 端口必须与 tomcat端口一致-->
+	<!-- 用webservice协议在8080端口暴露服务 ， 端口必须与 tomcat端口一致 -->
 	<dubbo:protocol name="dubbo" />
-	 <dubbo:protocol name="rest"   server="servlet"  port="8080" contextpath="dubbo-restservice"/>
+	<dubbo:protocol name="rest" server="servlet" port="8080"
+		contextpath="dubbo-restservice" />
 
-	<!-- 声明需要暴露的服务接口. 如果
- http://localhost:8080/dubbo-restservice/demo/doTest1
-	 -->
+	<!-- 声明需要暴露的服务接口. 如果 http://localhost:8080/dubbo-restservice/demo/doTest1 -->
 	<dubbo:service
-		interface="com.enson.webservice.service.UserService"   
-		ref="userService"   protocol="rest" />
+		interface="com.enson.webservice.service.UserService" ref="userService"
+		protocol="rest" />
 
 	<!-- 和本地bean一样实现服务 -->
 	<bean id="userService"
-		class="com.enson.webservice.service.impl.UserServiceImpl"  />
+		class="com.enson.webservice.service.impl.UserServiceImpl" />
 
 
 </beans>  

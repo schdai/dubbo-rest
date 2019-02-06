@@ -206,8 +206,14 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
+
 				<artifactId>tomcat8-maven-plugin</artifactId>
 				<version>3.0-r1655215</version>
+<!-- 
+tomcat 7
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.1</version>
+ -->
 			</plugin>
 
 
